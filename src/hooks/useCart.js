@@ -23,4 +23,5 @@ const useCart = (products) => {
   return [cart, setCart];
 };
 
+//custom hook
 export default useCart;
