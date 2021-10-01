@@ -9,11 +9,9 @@ const OrderReview = () => {
   return (
     <div className="shop-container">
       <div className="product-container"></div>
-      <div className="cart-container"></div>
-      <h1>{products.length}</h1>
-      <h3>{cart.length}</h3>
-      <h2>This is Order Review</h2>
-      <Cart cart={cart}></Cart>
+      <div className="cart-container">
+        <Cart cart={cart}></Cart>
+      </div>
     </div>
   );
 };
