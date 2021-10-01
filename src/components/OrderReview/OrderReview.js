@@ -6,9 +6,10 @@ import ReviewItem from "../ReviewItem/ReviewItem";
 
 const OrderReview = () => {
   const [products] = useProducts();
-  const [cart] = useCart(products);
+  const [cart, setCart] = useCart(products);
   const handleRemove = (key) => {
-    console.log(key);
+    const newCart = cart.filter((product) => product.key !== key);
+    setCart(newCart);
   };
   return (
     <div className="shop-container">
