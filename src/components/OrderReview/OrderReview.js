@@ -7,7 +7,9 @@ const OrderReview = () => {
   const [products] = useProducts();
   const [cart] = useCart(products);
   return (
-    <div>
+    <div className="shop-container">
+      <div className="product-container"></div>
+      <div className="cart-container"></div>
       <h1>{products.length}</h1>
       <h3>{cart.length}</h3>
       <h2>This is Order Review</h2>
