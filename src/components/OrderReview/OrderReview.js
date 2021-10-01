@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import useProducts from "../../hooks/useProduct";
 
 const OrderReview = () => {
-    return (
-        <div>
-            <h2>This is Order Review</h2>
-        </div>
-    );
+  const [products] = useProducts();
+  return (
+    <div>
+      <h1>{products.length}</h1>
+      <h2>This is Order Review</h2>
+    </div>
+  );
 };
 
 export default OrderReview;
