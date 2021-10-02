@@ -1,9 +1,9 @@
 import React from "react";
-
+import img from "../../images/giphy.gif";
 const PlaceOrder = () => {
   return (
     <div>
-      <h3>This is place order.</h3>
+      <img src={img} alt="" />
     </div>
   );
 };
