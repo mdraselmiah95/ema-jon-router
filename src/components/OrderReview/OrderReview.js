@@ -13,6 +13,8 @@ const OrderReview = () => {
     setCart(newCart);
     removeFromDb(key);
   };
+
+  const handlePlaceOrder = {};
   return (
     <div className="shop-container">
       <div className="product-container">
@@ -26,7 +28,9 @@ const OrderReview = () => {
       </div>
       <div className="cart-container">
         <Cart cart={cart}>
-          <button className="btn-regular">Place Order</button>
+          <button onClick={handlePlaceOrder} className="btn-regular">
+            Place Order
+          </button>
         </Cart>
       </div>
     </div>
