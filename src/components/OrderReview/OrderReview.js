@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProduct";
-import { removeFromDb } from "../../utilities/fakedb";
+import { clearTheCart, removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItem/ReviewItem";
 
@@ -18,6 +18,8 @@ const OrderReview = () => {
 
   const handlePlaceOrder = () => {
     history.push("/placeOrder");
+    setCart([]);
+    clearTheCart();
   };
   return (
     <div className="shop-container">
