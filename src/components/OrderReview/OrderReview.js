@@ -1,9 +1,9 @@
 import React from "react";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProduct";
+import { removeFromDb } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import ReviewItem from "../ReviewItem/ReviewItem";
-import { removeFromDb } from "../../utilities/fakedb";
 
 const OrderReview = () => {
   const [products] = useProducts();
@@ -25,7 +25,9 @@ const OrderReview = () => {
         ))}
       </div>
       <div className="cart-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart}>
+          <h2>Hello world</h2>
+        </Cart>
       </div>
     </div>
   );
