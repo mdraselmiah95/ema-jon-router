@@ -6,6 +6,9 @@ import {
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import initializeAuthentication from "../Firebase/Firebase.init";
+
+initializeAuthentication();
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
