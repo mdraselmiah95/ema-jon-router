@@ -19,7 +19,7 @@ const Shop = () => {
         setDisplayProducts(data);
       });
   }, []);
-
+  //useEffect
   useEffect(() => {
     if (products.length) {
       const savedCart = getStoredCart();
