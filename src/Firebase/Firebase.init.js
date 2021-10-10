@@ -12,7 +12,8 @@ Steps for authentication:
 
 -----------###-----------
 
-Initial Setup 
+Step-1:Initial Setup 
+
 1. firebase: create project
 2. create web app
 3. get configuration
