@@ -1,8 +1,15 @@
 import React from "react";
-import { Route } from "react-router";
+import { Redirect, Route } from "react-router";
+import useAuth from "../../hooks/useAuth";
 
 const PrivateRoute = ({ children, ...rest }) => {
-  return <Route>{...rest}</Route>;
+  const { user } = useAuth();
+  return (
+    <Route
+      {...rest}
+      render={() => (user.email ? children : <Redirect></Redirect>)}
+    ></Route>
+  );
 };
 
 export default PrivateRoute;
