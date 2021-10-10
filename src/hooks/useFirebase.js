@@ -21,7 +21,9 @@ const useFirebase = () => {
   };
 
   const logOut = () => {
-    signOut(auth).then(() => {});
+    signOut(auth).then(() => {
+      setUser({});
+    });
   };
 
   // observe whether user auth state changed or not
