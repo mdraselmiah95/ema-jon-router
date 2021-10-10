@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -12,6 +13,9 @@ const Login = () => {
           <br />
           <input type="submit" value="Submit" />
         </form>
+        <p>
+          new to eam-john ?<Link to="/register">Create Account</Link>
+        </p>
       </div>
     </div>
   );
