@@ -24,6 +24,8 @@ const useFirebase = () => {
     signOut(auth).then(() => {});
   };
 
+  // observe whether user auth state changed or not
+
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
