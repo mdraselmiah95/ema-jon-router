@@ -16,6 +16,8 @@ const Login = () => {
         <p>
           new to eam-john ?<Link to="/register">Create Account</Link>
         </p>
+        <div>or</div>
+        <button className="btn-regular">Google Sign In</button>
       </div>
     </div>
   );
