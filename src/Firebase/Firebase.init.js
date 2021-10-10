@@ -22,4 +22,10 @@ Step-1:Initial Setup
 
 -------------------------
 
+Step-2:
+
+1. Create Login Component
+2. Create Register Component 
+3. Create Route for Login and Register
+
 */
