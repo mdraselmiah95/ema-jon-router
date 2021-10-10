@@ -19,6 +19,6 @@ Initial Setup
 4. initialize firebase
 5. Enable auth method
 
-
+-------------------------
 
 */
