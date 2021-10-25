@@ -8,6 +8,7 @@ import "./Shop.css";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
   // products to be rendered on the UI
   const [displayProducts, setDisplayProducts] = useState([]);
 
@@ -17,6 +18,9 @@ const Shop = () => {
       .then((data) => {
         setProducts(data.products);
         setDisplayProducts(data.products);
+        const count = data.count;
+        const pageNumber = Math.ceil(count / 10);
+        setPageCount(pageNumber);
       });
   }, []);
   //useEffect
@@ -80,6 +84,11 @@ const Shop = () => {
               handleAddToCart={handleAddToCart}
             ></Product>
           ))}
+          <div className="pagination">
+            {[...Array(pageCount).keys()].map((number) => (
+              <button>{number}</button>
+            ))}
+          </div>
         </div>
         <div className="cart-container">
           <Cart cart={cart}>
