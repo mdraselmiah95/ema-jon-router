@@ -11,7 +11,7 @@ const Login = () => {
   // console.log(location.state?.from);
 
   const handleGoogleLogin = () => {
-    signInUsingGoogle().than((result) => {
+    signInUsingGoogle().then((result) => {
       history.push(redirect_url);
     });
   };
