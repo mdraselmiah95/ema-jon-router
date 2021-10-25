@@ -87,7 +87,11 @@ const Shop = () => {
           ))}
           <div className="pagination">
             {[...Array(pageCount).keys()].map((number) => (
-              <button key={number} onClick={() => setPage(number)}>
+              <button
+                className={number === page ? "selected" : ""}
+                key={number}
+                onClick={() => setPage(number)}
+              >
                 {number}
               </button>
             ))}
