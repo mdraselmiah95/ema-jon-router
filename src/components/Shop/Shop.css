@@ -24,3 +24,7 @@
   padding: 5px 15px;
   cursor: pointer;
 }
+
+.pagination .selected {
+  background-color: rgb(35, 35, 114);
+}
