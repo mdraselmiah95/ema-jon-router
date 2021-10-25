@@ -15,8 +15,8 @@ const Shop = () => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
       .then((data) => {
-        setProducts(data);
-        setDisplayProducts(data);
+        setProducts(data.products);
+        setDisplayProducts(data.products);
       });
   }, []);
   //useEffect
