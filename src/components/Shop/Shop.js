@@ -92,7 +92,7 @@ const Shop = () => {
                 key={number}
                 onClick={() => setPage(number)}
               >
-                {number}
+                {number + 1}
               </button>
             ))}
           </div>
