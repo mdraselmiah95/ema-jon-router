@@ -23,7 +23,7 @@ const Shop = () => {
         const pageNumber = Math.ceil(count / size);
         setPageCount(pageNumber);
       });
-  }, []);
+  }, [page]);
   //useEffect
   useEffect(() => {
     if (products.length) {
