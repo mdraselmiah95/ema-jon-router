@@ -99,13 +99,11 @@ const Shop = () => {
           </div>
         </div>
         <div className="cart-container">
-          {cart.length && (
-            <Cart cart={cart}>
-              <Link to="/review">
-                <button className="btn-regular">Review Order</button>
-              </Link>
-            </Cart>
-          )}
+          <Cart cart={cart}>
+            <Link to="/review">
+              <button className="btn-regular">Review Order</button>
+            </Link>
+          </Cart>
         </div>
       </div>
     </>
