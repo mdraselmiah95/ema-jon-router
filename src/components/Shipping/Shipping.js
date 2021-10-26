@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
-import { getStoredCart } from "../../utilities/fakedb";
+import { clearTheCart, getStoredCart } from "../../utilities/fakedb";
 import "./Shipping.css";
 const Shipping = () => {
   const {
@@ -28,6 +28,7 @@ const Shipping = () => {
         // console.log(result);
         if (result.insertedId) {
           alert("Order processed successfully");
+          clearTheCart();
           reset();
         }
       });
