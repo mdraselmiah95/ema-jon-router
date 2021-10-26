@@ -7,6 +7,7 @@ const Shipping = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
   const { user } = useAuth();
@@ -24,7 +25,11 @@ const Shipping = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        // console.log(result);
+        if (result.insertedId) {
+          alert("Order processed successfully");
+          reset();
+        }
       });
   };
   return (
