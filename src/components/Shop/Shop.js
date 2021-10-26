@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import useCart from "../../hooks/useCart";
 import { addToDb, getStoredCart } from "../../utilities/fakedb";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
@@ -7,7 +8,7 @@ import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState(products);
+  const [cart, setCart] = useCart();
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(0);
   // products to be rendered on the UI
@@ -37,7 +38,7 @@ const Shop = () => {
           storedCart.push(addedProduct);
         }
       }
-      setCart(storedCart);
+      // setCart(storedCart);
     }
   }, [products]);
 
@@ -98,11 +99,13 @@ const Shop = () => {
           </div>
         </div>
         <div className="cart-container">
-          <Cart cart={cart}>
-            <Link to="/review">
-              <button className="btn-regular">Review Order</button>
-            </Link>
-          </Cart>
+          {cart.length && (
+            <Cart cart={cart}>
+              <Link to="/review">
+                <button className="btn-regular">Review Order</button>
+              </Link>
+            </Cart>
+          )}
         </div>
       </div>
     </>
