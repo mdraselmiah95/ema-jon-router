@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import useAuth from "../../hooks/useAuth";
 import "./Order.css";
 const Order = () => {
   const [orders, setOrders] = useState([]);
-
+  const { user } = useAuth();
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch(`http://localhost:5000/orders?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
