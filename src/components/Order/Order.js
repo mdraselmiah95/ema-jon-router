@@ -12,6 +12,13 @@ const Order = () => {
   return (
     <div>
       <h2>Total Orders: {orders.length}</h2>
+      <ul>
+        {orders.map((order) => (
+          <li key={order._id}>
+            Name: {order.name}: Email: {order.email}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
