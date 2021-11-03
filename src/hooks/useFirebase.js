@@ -1,5 +1,6 @@
 import {
   getAuth,
+  getIdToken,
   GoogleAuthProvider,
   onAuthStateChanged,
   signInWithPopup,
@@ -31,6 +32,7 @@ const useFirebase = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
+        getIdToken(user).then((idToken) => console.log(idToken));
         setUser(user);
       }
     });
